@@ -19,18 +19,21 @@ public class Raiz2 {
         double sub = 0; // double auxiliar de substituição
         double num = numeroUsuario(texto); // numero que o usuario deu 
         ra = maisProximo(num); // chamando a função numero mais proximo
-        while((ra * ra) != num){
-            ra = (ra + (num/ra))/2;
-            if(ra == sub){
-                System.out.println("A raiz quadrada aproximada de " + num + " é " + ra);
-                break;
+        if (num <=0){
+            System.out.println("Não é possível calcular raíz quadrada de 0 ou de número negativo");
+        }else{
+            while((ra * ra) != num){
+                ra = (ra + (num/ra))/2;
+                if(ra == sub){
+                    System.out.println("A raiz quadrada aproximada de " + num + " é " + ra);
+                    break;
+                }
+                sub = ra;
             }
-            sub = ra;
+            if((ra * ra) == num){
+                System.out.println("A raiz quadrada exata de " + num + " é " + ra);
+            }
         }
-        if((ra * ra) == num){
-            System.out.println("A raiz quadrada exata de " + num + " é " + ra);
-        }
-        
     }
    public static double numeroUsuario(String texto){
        Scanner in = new Scanner(System.in);
