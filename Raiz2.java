@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Raiz2 {
 
    public static void main(String[] args){
-        String texto = "Qual numero vc que saber a raiz quadrada?";
+        String texto = "Qual o numero que você quer saber a raiz quadrada?";
         double ra = 0;// Raiz        
         double sub = 0; // double auxiliar de substituição
         double num = numeroUsuario(texto); // numero que o usuario deu 
@@ -42,7 +42,7 @@ public class Raiz2 {
        return num;
        
    }
-    public static double maisProximo(double vet){
+   public static double maisProximo(double vet){
         double raiz = 1;
         int aux = 0;
         for(int i = 0; i < vet; i++){
